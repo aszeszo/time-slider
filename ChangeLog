@@ -1,3 +1,15 @@
+2012-01-25 Padraig O'Briain - <padraig.obriain@oracle.com>
+
+	* usr/share/time-slider/lib/plugin/zfssend/zfssend.py:
+	Fix for 7065464
+	* VERSION: bumped to 0.2.101
+
+2012-01-18 Padraig O'Briain - <padraig.obriain@oracle.com>
+
+	* usr/share/time-slider/lib/time-sliderd.py:
+	  Fix for 7064327
+	* VERSION: bumped to 0.2.100
+
 2011-07-29 Erwann Chenede - <erwann.chenede@oracle.com>
 
 	* var/*: moved to lib for 6939144

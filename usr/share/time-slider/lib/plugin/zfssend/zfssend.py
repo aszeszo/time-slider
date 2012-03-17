@@ -26,9 +26,7 @@ import subprocess
 import syslog
 from bisect import insort
 
-import time_slider.util
-import time_slider.smf
-import time_slider.zfs
+from time_slider import util, smf, zfs
 
 # Set to True if SMF property value of "plugin/command" is "true"
 verboseprop = "plugin/verbose"
@@ -152,7 +150,7 @@ def main(argv):
         prevlabel = ds.get_user_property(propname)
 
         snapname = "%s@%s" % (ds.name, snaplabel)
-        if (prevlabel == None or len(prevlabel) == 0):
+        if (prevlabel == None or prevlabel == '-' or len(prevlabel) == 0):
             # No previous backup - send a full replication stream
             sendcmd = [zfs.ZFSCMD, "send", snapname]
             util.debug("No previous backup registered for %s" % ds.name, verbose)

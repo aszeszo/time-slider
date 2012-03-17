@@ -673,7 +673,7 @@ class SnapshotManager(threading.Thread):
             util.debug("%s pool status after cleanup:" \
                        % zpool.name, \
                        self.verbose)
-            util.debug(zpool, self.verbose)
+            util.debug(zpool.name, self.verbose)
         util.debug("Cleanup completed. %d snapshots were destroyed" \
                    % len(self._destroyedsnaps), \
                    self.verbose)
